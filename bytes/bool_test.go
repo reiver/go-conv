@@ -230,6 +230,18 @@ func TestBoolError(t *testing.T) {
 		Text []byte
 	}{
 		{
+			Text: nil,
+		},
+
+
+
+		{
+			Text: []byte(""),
+		},
+
+
+
+		{
 			Text: []byte("z"),
 		},
 
