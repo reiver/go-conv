@@ -4,6 +4,8 @@ Package convbytes provides tools for converting text into builtin and custom Go 
 
 Example
 
+Here is an example of a common usage of this package:
+
 	import "github.com/reiver/go-conv/bytes"
 	
 	// ...
