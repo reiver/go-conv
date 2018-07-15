@@ -9,8 +9,9 @@ func Int64(data []byte) (int64, error) {
 
 	if 0 >= len(data) {
 		return 0, InterpretationError{
-			value: string(data),
-			reason: "invalid int64 literal",
+			context: "int64",
+			value:   string(data),
+			reason:  "no data",
 		}
 	}
 
@@ -21,8 +22,9 @@ func Int64(data []byte) (int64, error) {
 		r0,size := utf8.DecodeRune(data)
 		if utf8.RuneError == r0 {
 			return 0, InterpretationError{
-				value: string(data),
-				reason: "invalid int64 literal",
+				context: "int64",
+				value:   string(data),
+				reason:  "invalid UTF-8 data",
 			}
 		}
 
@@ -46,11 +48,12 @@ func Int64(data []byte) (int64, error) {
 	{
 		ui64, err := Uint64(p)
 		if nil != err {
-			switch err.(type) {
+			switch e := err.(type) {
 			case InterpretationError:
 				return 0, InterpretationError{
-					value: string(data),
-					reason: "invalid int64 literal",
+					context: "int64",
+					value:   string(data),
+					reason:  e.Reason(),
 				}
 
 			default:
@@ -65,8 +68,9 @@ func Int64(data []byte) (int64, error) {
 
 			if maxInt64 < ui64 {
 				return 0, Overflow{
-					value: string(data),
-					reason: fmt.Sprintf("maximum int64 is %d, %d is outside of that range", maxInt64, ui64),
+					context: "int64",
+					value:   string(data),
+					reason:  fmt.Sprintf("maximum is %d, %d is outside of that range", maxInt64, ui64),
 				}
 			}
 
@@ -79,8 +83,9 @@ func Int64(data []byte) (int64, error) {
 
 			if minInt64Abs < ui64 {
 				return 0, Overflow{
-					value: string(data),
-					reason: fmt.Sprintf("minimum int64 is −%d, −%d is outside of that range", minInt64Abs, ui64),
+					context: "int64",
+					value:   string(data),
+					reason:  fmt.Sprintf("minimum is −%d, −%d is outside of that range", minInt64Abs, ui64),
 				}
 			}
 
