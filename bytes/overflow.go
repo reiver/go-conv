@@ -11,7 +11,7 @@ type Overflow struct {
 }
 
 func (receiver Overflow) Error() string {
-	return fmt.Sprintf("conv: overflow caused by %q: %s", receiver.value, receiver.reason)
+	return fmt.Sprintf("conv: [%s] overflow caused by %q: %s", receiver.context, receiver.value, receiver.reason)
 }
 
 func (receiver Overflow) Context() string {

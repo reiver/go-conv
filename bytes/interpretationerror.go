@@ -11,7 +11,7 @@ type InterpretationError struct {
 }
 
 func (receiver InterpretationError) Error() string {
-	return fmt.Sprintf("conv: interpretation error of %q: %s", receiver.value, receiver.reason)
+	return fmt.Sprintf("conv: [%s] interpretation error of %q: %s", receiver.context, receiver.value, receiver.reason)
 }
 
 func (receiver InterpretationError) Context() string {
