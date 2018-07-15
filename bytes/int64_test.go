@@ -2124,6 +2124,18 @@ func TestInt64(t *testing.T) {
 
 
 
+		{
+			Text: []byte("ⅩⅭ"),
+			Expected:     90,
+		},
+		{
+			Text: []byte("ⅭⅯ"),
+			Expected:    900,
+		},
+
+
+
+
 
 
 
@@ -2252,6 +2264,16 @@ func TestInt64(t *testing.T) {
 			Expected:     1984,
 		},
 
+
+
+		{
+			Text: []byte("ⅹⅽ"),
+			Expected:     90,
+		},
+		{
+			Text: []byte("ⅽⅿ"),
+			Expected:    900,
+		},
 
 
 
