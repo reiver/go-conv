@@ -570,7 +570,7 @@ func TestInt64(t *testing.T) {
 		},
 		{
 			Text: []byte("−9876543210"), // MINUS SIGN (U+2212)
-			Expected:      9876543210,
+			Expected:     -9876543210,
 		},
 		{
 			Text: []byte("﹣9876543210"), // SMALL HYPHEN-MINUS (U+FE63)
@@ -1236,7 +1236,7 @@ func TestInt64(t *testing.T) {
 		},
 		{
 			Text: []byte("−٩٨٧٦٥٤٣٢١٠"), // MINUS SIGN (U+2212)
-			Expected:      9876543210,
+			Expected:     -9876543210,
 		},
 		{
 			Text: []byte("﹣٩٨٧٦٥٤٣٢١٠"), // SMALL HYPHEN-MINUS (U+FE63)
@@ -1902,7 +1902,7 @@ func TestInt64(t *testing.T) {
 		},
 		{
 			Text: []byte("−۹۸۷۶۵۴۳۲۱۰"), // MINUS SIGN (U+2212)
-			Expected:      9876543210,
+			Expected:     -9876543210,
 		},
 		{
 			Text: []byte("﹣۹۸۷۶۵۴۳۲۱۰"), // SMALL HYPHEN-MINUS (U+FE63)
