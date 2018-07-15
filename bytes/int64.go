@@ -17,7 +17,6 @@ func Int64(data []byte) (int64, error) {
 
 	var negative bool
 	var p      []byte = data
-
 	{
 		r0,size := utf8.DecodeRune(data)
 		if utf8.RuneError == r0 {
