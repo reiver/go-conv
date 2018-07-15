@@ -3017,12 +3017,12 @@ func TestInt64(t *testing.T) {
 
 		actual, err := Int64(test.Text)
 		if nil != err {
-			t.Errorf("For test #%d, did not expect an error, but actually got one: (%T) %v", testNumber, err, err)
+			t.Errorf("For test #%d, for %q, did not expect an error, but actually got one: (%T) %v", testNumber, test.Text, err, err)
 			continue
 		}
 
 		if expected := test.Expected; expected != actual {
-			t.Errorf("For test #%d, expected %d, but actually got %d.", testNumber, expected, actual)
+			t.Errorf("For test #%d, for %q, expected %d, but actually got %d.", testNumber, test.Text, expected, actual)
 			continue
 		}
 	}
