@@ -45,7 +45,7 @@ For example, common ways that “false” gets written are:
 
 • ⊥
 
-(These are all case-insensitive. So this “false”, “FALSE”, “False”, “fAlSe”, etc are all the same.)
+(These are all case-insensitive. So “false”, “FALSE”, “False”, “fAlSe”, etc are all the same.)
 
 Also, for example, common ways that “true” gets written are:
 
@@ -65,7 +65,7 @@ Also, for example, common ways that “true” gets written are:
 
 • ⊤
 
-(These are all case-insensitive. So this “true”, “TRUE”, “True”, “tRuE”, etc are all the same.)
+(These are all case-insensitive. So “true”, “TRUE”, “True”, “tRuE”, etc are all the same.)
 
 This package provides a tool that can help you convert text (stored in a []byte) into a Go bool
 
