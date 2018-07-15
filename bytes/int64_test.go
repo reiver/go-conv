@@ -2002,6 +2002,138 @@ func TestInt64(t *testing.T) {
 
 
 
+		//
+		// Roman Numerals
+		//
+
+
+
+		{
+			Text: []byte("Ⅰ"),
+			Expected:     1,
+		},
+		{
+			Text: []byte("Ⅱ"),
+			Expected:     2,
+		},
+		{
+			Text: []byte("Ⅲ"),
+			Expected:     3,
+		},
+		{
+			Text: []byte("Ⅳ"),
+			Expected:     4,
+		},
+		{
+			Text: []byte("Ⅴ"),
+			Expected:     5,
+		},
+		{
+			Text: []byte("Ⅵ"),
+			Expected:     6,
+		},
+		{
+			Text: []byte("Ⅶ"),
+			Expected:     7,
+		},
+		{
+			Text: []byte("Ⅷ"),
+			Expected:     8,
+		},
+		{
+			Text: []byte("Ⅸ"),
+			Expected:     9,
+		},
+		{
+			Text: []byte("Ⅹ"),
+			Expected:     10,
+		},
+		{
+			Text: []byte("Ⅺ"),
+			Expected:     11,
+		},
+		{
+			Text: []byte("Ⅻ"),
+			Expected:     12,
+		},
+
+		{
+			Text: []byte("Ⅼ"),
+			Expected:    50,
+		},
+
+		{
+			Text: []byte("Ⅽ"),
+			Expected:   100,
+		},
+		{
+			Text: []byte("Ⅾ"),
+			Expected:   500,
+		},
+		{
+			Text: []byte("Ⅿ"),
+			Expected:  1000,
+		},
+
+
+		{
+			Text: []byte("ⅠⅠ"),
+			Expected:     2,
+		},
+		{
+			Text: []byte("ⅠⅠⅠ"),
+			Expected:     3,
+		},
+		{
+			Text: []byte("ⅠⅤ"),
+			Expected:     4,
+		},
+
+		{
+			Text: []byte("ⅤⅠ"),
+			Expected:     6,
+		},
+		{
+			Text: []byte("ⅤⅠⅠ"),
+			Expected:     7,
+		},
+		{
+			Text: []byte("ⅤⅠⅠⅠ"),
+			Expected:     8,
+		},
+		{
+			Text: []byte("ⅠⅩ"),
+			Expected:     9,
+		},
+
+		{
+			Text: []byte("ⅩⅠ"),
+			Expected:     11,
+		},
+		{
+			Text: []byte("ⅩⅠⅠ"),
+			Expected:     12,
+		},
+
+
+
+		{
+			Text: []byte("ⅯⅭⅯⅬⅩⅩⅩⅠⅤ"),
+			Expected:     1984,
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
