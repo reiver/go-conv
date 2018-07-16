@@ -13,7 +13,6 @@ func Bool(writer io.Writer, value bool) (int64, error) {
 	var t [4]byte = [4]byte{'t','r','u','e'}
 	var f [5]byte = [5]byte{'f','a','l','s','e'}
 
-
 	var n64 int64
 	var err error
 
