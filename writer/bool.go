@@ -53,11 +53,29 @@ var (
 //
 //	//...
 //
-//	var value bool
+//	var value bool = true
 //	
 //	//...
 //	
 //	convwrite.Bool(writer, value)
+//	
+//	// Output:
+//	// true
+//
+// Another example:
+//
+//	var writer io.Writer
+//
+//	//...
+//
+//	var value bool = true
+//	
+//	//...
+//	
+//	convwrite.Bool(writer, value, "Off")
+//	
+//	// Output:
+//	// On
 func Bool(writer io.Writer, value bool, params ...interface{}) (int64, error) {
 
 	if nil == writer {
