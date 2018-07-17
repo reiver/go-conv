@@ -159,6 +159,70 @@ func TestBool(t *testing.T) {
 
 
 		{
+			Params: []interface{}{'٠'}, // Arabic-Indic Digit Zero  (٠)
+			Value:                 false,
+			Expected:             "٠",  // Arabic-Indic Digit Zero  (٠)
+		},
+		{
+			Params: []interface{}{'٠'}, // Arabic-Indic Digit Zero  (٠)
+			Value:                 true,
+			Expected:             "١",  // Arabic-Indic Digit One   (١)
+		},
+
+
+
+		{
+			Params: []interface{}{'١'}, // Arabic-Indic Digit One   (١)
+			Value:                 false,
+			Expected:             "٠",  // Arabic-Indic Digit Zero  (٠)
+		},
+		{
+			Params: []interface{}{'١'}, // Arabic-Indic Digit One   (١)
+			Value:                 true,
+			Expected:             "١",  // Arabic-Indic Digit One   (١)
+		},
+
+
+
+
+
+
+
+
+
+		{
+			Params: []interface{}{'۰'}, // Extended Arabic-Indic Digit Zero  (۰)
+			Value:                 false,
+			Expected:             "۰",  // Extended Arabic-Indic Digit Zero  (۰)
+		},
+		{
+			Params: []interface{}{'۰'}, // Extended Arabic-Indic Digit Zero  (۰)
+			Value:                 true,
+			Expected:             "۱",  // Extended Arabic-Indic Digit One   (۱)
+		},
+
+
+
+		{
+			Params: []interface{}{'۱'}, // Extended Arabic-Indic Digit One   (۱)
+			Value:                 false,
+			Expected:             "۰",  // Extended Arabic-Indic Digit Zero  (۰)
+		},
+		{
+			Params: []interface{}{'۱'}, // Extended Arabic-Indic Digit One   (۱)
+			Value:                 true,
+			Expected:             "۱",  // Extended Arabic-Indic Digit One   (۱)
+		},
+
+
+
+
+
+
+
+
+
+		{
 			Params: []interface{}{'F'},
 			Value:                 false,
 			Expected:             "F",

@@ -8,6 +8,12 @@ var (
 	boolStyle_0_1_false = [...]byte{'0'}
 	boolStyle_0_1_true  = [...]byte{'1'}
 
+	boolStyle_٠_١_false = []byte("٠") // Arabic-Indic Digits
+	boolStyle_٠_١_true  = []byte("١") // Arabic-Indic Digits
+
+	boolStyle_۰_۱_false = []byte("۰") // Extended Arabic-Indic Digits
+	boolStyle_۰_۱_true  = []byte("۱") // Extended Arabic-Indic Digits
+
 	boolStyle_F_T_false = [...]byte{'F'}
 	boolStyle_F_T_true  = [...]byte{'T'}
 
@@ -99,6 +105,18 @@ func Bool(writer io.Writer, value bool, params ...interface{}) (int64, error) {
 		     "0","1":
 			f = boolStyle_0_1_false[:]
 			t = boolStyle_0_1_true[:]
+
+		// Arabic-Indic Digits
+		case '٠','١',
+		     "٠","١":
+			f = boolStyle_٠_١_false
+			t = boolStyle_٠_١_true
+
+		// Extended Arabic-Indic Digits
+		case '۰','۱',
+		     "۰","۱":
+			f = boolStyle_۰_۱_false
+			t = boolStyle_۰_۱_true
 
 		case 'F','T',
 		     "F","T":
